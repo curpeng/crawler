@@ -7,11 +7,17 @@ module Crawler
       @inputs_count = inputs_count
       @parent = parent
       @depth = depth
-      @refers_to = [] # maybe should be a queue
+      @refers_to = []
     end
 
     def add_reference(page)
       @refers_to << page
+    end
+
+    def each_page &block
+      yield(self)
+
+      refers_to.each { |page| page.each_page &block }
     end
   end
 end

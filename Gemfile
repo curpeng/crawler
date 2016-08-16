@@ -10,5 +10,7 @@ group :test do
   gem 'webmock'
   gem 'sinatra'
   gem 'pry'
+  gem 'pry-byebug'
   gem 'haml'
+  gem 'simplecov', :require => false
 end

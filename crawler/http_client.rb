@@ -11,7 +11,6 @@ module Crawler
       }
 
       @connection = Faraday.new(opts) do |c|
-        c.response :logger
         c.use ::FaradayMiddleware::FollowRedirects
         c.adapter Faraday.default_adapter
       end
