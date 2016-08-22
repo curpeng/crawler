@@ -4,6 +4,8 @@ source "https://rubygems.org"
 gem 'nokogiri'
 gem 'faraday'
 gem 'faraday_middleware'
+gem 'concurrent-ruby', require: 'concurrent'
+gem 'addressable'
 
 group :test do
   gem 'rspec'
